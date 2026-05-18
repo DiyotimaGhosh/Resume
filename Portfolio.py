@@ -213,7 +213,7 @@ with spacer_column:
 with hero_right:
 
     st.image(
-        "C:/Users/diyot/OneDrive/Attachments/Image.jpeg",
+        "Image.jpeg",
         use_container_width=True
     )
 
