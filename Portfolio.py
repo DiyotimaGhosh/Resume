@@ -174,7 +174,7 @@ st.markdown("""
 
 st.markdown("""
 <div class="nav-bar">
-    <a class="nav-item" href="#about-me">🏠 HOME</a>
+    <a class="nav-item" href="#about-me">🏠 ABOUT</a>
     <a class="nav-item" href="#technical-skills">⚙️ SKILLS</a>
     <a class="nav-item" href="#experience">💼 EXPERIENCE</a>
     <a class="nav-item" href="#projects">📁 PROJECTS</a>
@@ -364,23 +364,28 @@ with col_right:
     with st.container():
         st.markdown('<div id="projects" class="cyber-container">', unsafe_allow_html=True)
         st.markdown('<div class="section-header" style="color: #ff00cc;">📁 Projects</div>', unsafe_allow_html=True)
-
-        projects_data = [
+        
+projects_data = [
             {"title": "Education Platform (Coding Updesh)",
              "desc": "I developed a full-stack education platform where students can access content and explore quizzes. I used Angular, Spring Boot, MySQL & MongoDB.",
-             "border": "#00cfff"},
+             "border": "#00cfff",
+             "url": "https://github.com/DiyotimaGhosh"},
             {"title": "Wallet Management System",
              "desc": "I built a Student Wallet Management System using Spring Boot and databases to help students track income, expenses, and savings effectively.",
-             "border": "#00ffcc"},
+             "border": "#00ffcc",
+             "url": "https://github.com/DiyotimaGhosh/Wallet-Management"},
             {"title": "Movie Application Database",
              "desc": "I designed and implemented a normalized relational database schema (MySQL) for a movie application to manage users, movies, bookings, and transactions.",
-             "border": "#ff00cc"},
+             "border": "#ff00cc",
+             "url": "https://github.com/DiyotimaGhosh/Movie-Application-"},
             {"title": "Ordering Application",
              "desc": "I created a Pizza Ordering Application in Python where users can place multiple orders in a single session and view the total bill.",
-             "border": "#ffaa00"},
+             "border": "#ffaa00",
+             "url": "https://github.com/DiyotimaGhosh/Ordering-Application"},
             {"title": "Women Safety Application (Safe Nest)",
              "desc": "I developed a console-based safety application in Java to provide immediate help and security features for users in distress.",
-             "border": "#00cfff"}
+             "border": "#00cfff",
+             "url": "https://github.com/DiyotimaGhosh/Women-Safety-Application"}
         ]
 
         for proj in projects_data:
