@@ -365,11 +365,14 @@ with col_right:
         st.markdown('<div id="projects" class="cyber-container">', unsafe_allow_html=True)
         st.markdown('<div class="section-header" style="color: #ff00cc;">📁 Projects</div>', unsafe_allow_html=True)
         
-projects_data = [
-            {"title": "Education Platform (Coding Updesh)",
+with st.container():
+        st.markdown('<div id="projects" class="cyber-container">', unsafe_allow_html=True)
+        st.markdown('<div class="section-header" style="color: #ff00cc;">📁 Projects</div>', unsafe_allow_html=True)
+
+        projects_data = [{"title": "Education Platform (Coding Updesh)",
              "desc": "I developed a full-stack education platform where students can access content and explore quizzes. I used Angular, Spring Boot, MySQL & MongoDB.",
              "border": "#00cfff",
-             "url": "https://github.com/DiyotimaGhosh"},
+             "url": "https://codingupdesh.web.app/"},
             {"title": "Wallet Management System",
              "desc": "I built a Student Wallet Management System using Spring Boot and databases to help students track income, expenses, and savings effectively.",
              "border": "#00ffcc",
@@ -386,8 +389,10 @@ projects_data = [
              "desc": "I developed a console-based safety application in Java to provide immediate help and security features for users in distress.",
              "border": "#00cfff",
              "url": "https://github.com/DiyotimaGhosh/Women-Safety-Application"}
+            
         ]
 
+      
         for proj in projects_data:
             st.markdown(f"""
             <div class="project-card" style="border-left: 4px solid {proj['border']};">
@@ -395,10 +400,11 @@ projects_data = [
                     <div style="font-weight:700; color:{proj['border']}; font-size:15px; margin-bottom:4px;">{proj['title']}</div>
                     <div style="font-size:13px; color:#cfc9da; line-height:1.4;">{proj['desc']}</div>
                 </div>
-                <div class="project-btn">View Project ➔</div>
+                <a href="{proj['url']}" target="_blank" class="project-link-wrapper">
+                    <div class="project-btn">View Project ➔</div>
+                </a>
             </div>
             """, unsafe_allow_html=True)
-
         st.markdown('</div>', unsafe_allow_html=True)
 
 
