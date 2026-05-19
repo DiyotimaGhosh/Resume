@@ -125,6 +125,9 @@ st.markdown("""
     .project-info {
         padding-right: 15px;
     }
+    .project-link-wrapper {
+        text-decoration: none;
+    }
     .project-btn {
         background: transparent;
         color: white;
@@ -135,6 +138,9 @@ st.markdown("""
         white-space: nowrap;
         cursor: pointer;
         box-shadow: 0 0 8px rgba(255,0,204,0.3);
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s;
     }
     .project-card:hover .project-btn {
         background: #ff00cc;
@@ -211,7 +217,6 @@ with spacer_column:
     st.write("")  # Serves as a buffer to expand the layout horizon horizontally
 
 with hero_right:
-
     st.image(
         "Image.jpeg",
         use_container_width=True
@@ -324,8 +329,7 @@ I also worked on light weight APIs such as Stream lit-based applications for rap
             <li>Actively participated in technical activities, public speaking and collaborative learning environments.</li>
         </ul>
     </div>
-    """,
-                unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
 
 with col_right:
@@ -365,11 +369,8 @@ with col_right:
         st.markdown('<div id="projects" class="cyber-container">', unsafe_allow_html=True)
         st.markdown('<div class="section-header" style="color: #ff00cc;">📁 Projects</div>', unsafe_allow_html=True)
         
-with st.container():
-        st.markdown('<div id="projects" class="cyber-container">', unsafe_allow_html=True)
-        st.markdown('<div class="section-header" style="color: #ff00cc;">📁 Projects</div>', unsafe_allow_html=True)
-
-        projects_data = [{"title": "Education Platform (Coding Updesh)",
+        projects_data = [
+            {"title": "Education Platform (Coding Updesh)",
              "desc": "I developed a full-stack education platform where students can access content and explore quizzes. I used Angular, Spring Boot, MySQL & MongoDB.",
              "border": "#00cfff",
              "url": "https://codingupdesh.web.app/"},
@@ -389,10 +390,8 @@ with st.container():
              "desc": "I developed a console-based safety application in Java to provide immediate help and security features for users in distress.",
              "border": "#00cfff",
              "url": "https://github.com/DiyotimaGhosh/Women-Safety-Application"}
-            
         ]
 
-      
         for proj in projects_data:
             st.markdown(f"""
             <div class="project-card" style="border-left: 4px solid {proj['border']};">
